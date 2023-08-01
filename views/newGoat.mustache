@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body class="container">
+    <h2>增加一个新学生</h2>
+    <form method="post" role="form">
+        <div class="form-group">
+            <label for="name">姓名：</label>
+            {{^user}} 
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名">
+            {{/user}} 
+            {{#user}} 
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名" value="{{user.user}}">
+            {{/user}} 
+        </div>
+        <div class="form-group">
+            <label for="age">年龄：</label>
+            <input type="text" class="form-control" id="age" name="age" placeholder="请输入年龄">
+        </div>
+        <div class="form-group">
+            <label for="tel">电话：</label>
+            <textarea class="form-control" id="tel" name="tel" placeholder="请填写电话号码" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="birth">生日：</label>
+            <textarea class="form-control" id="birth" name="birth" placeholder="请填写生日信息" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="classNO">班级：</label>
+            <textarea class="form-control" id="classNO" name="classNO" placeholder="请填写班级" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="提交" class="btn btn-primary">
+        </div>
+    </form>
+    <div class="text-right">
+  </div>
+</body>
+</html>

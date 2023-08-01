@@ -1,0 +1,22 @@
+{
+  "name": "17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "czd",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mustache-express": "^1.3.2",
+    "nedb": "^1.8.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
+}

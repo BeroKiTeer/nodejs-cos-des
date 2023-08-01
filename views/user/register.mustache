@@ -1,0 +1,24 @@
+<html lang="en"> 
+<head> 
+    {{>header}} 
+</head> 
+<body class="container"> 
+    <h1>{{title}}</h1> 
+<h2>新用户注册</h2> 
+ 
+<form method="post" role="/register"> 
+    <div class="form-group"> 
+        {{user-name-error}} 
+        <label for="username">用户名</label> 
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" required> 
+    </div> 
+    <div class="form-group"> 
+        <label for="password">密码 (至少8个字符)</label> 
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" minlength="8" required> 
+    </div> 
+        <div class="form-group"> 
+        <input type="submit" value="注册" class="btn btn-primary"> 
+    </div> 
+</form> 
+</body> 
+</html>

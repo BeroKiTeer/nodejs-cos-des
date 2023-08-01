@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body class="container">
+    <h1>{{title}}</h1>
+    {{^user}} 
+        <p>现在是游客模式。请<a id="login" href="/login">登录</a></p>
+    {{/user}} 
+    {{#user}} 
+        <p>欢迎您，{{user.user}}</p>
+    {{/user}} 
+    <div class="text-right" style="margin-bottom: 1em;"> 
+        {{^user}} 
+            <a id="login" href="/login" class="btn btn-primary"> 
+                登录
+            </a> 
+            <a id="login" href="/register" class="btn btn-primary"> 
+                注册
+            </a> 
+        {{/user}} 
+        {{#user}} 
+            <a id="logout" href="/logout" class="btn btn-primary"> 
+                登出
+            </a> 
+        {{/user}} 
+    </div>
+    <div class="text-right">
+    <button type="button" onclick="location.href='/new'">
+        添加新成员 
+    </button> 
+    </div>
+    {{#student}}
+    <div class="card-text">
+        姓名：{{name}}
+    </div>
+    <div>
+        年龄：{{age}}
+    </div>
+    <div>
+        生日：{{birth}}
+    </div>
+    <div>
+        电话：{{tel}}
+    </div>
+    <div class="card-text">
+        班级：<a href="/post/?classNO={{classNO}}">{{classNO}}</a>
+    </div>
+    <hr>
+    {{/student}}
+    {{^student}}
+        <div>Not Find</div>
+    {{/student}}
+</body>
+</html>
